@@ -2,24 +2,39 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
-  const blogs = Array(1)
-    .fill(0)
-    .map((_, i) => i + 1); // Create an array
+  const blogs = [
+    {
+      id: 1,
+      heading: "What do I need to do to get fired around here?",
+      date: "June 19, 2023",
+    },
+  ];
 
   return (
-    <div
-      style={{
-        backgroundColor: "white",
-        color: "black",
-        marginLeft: "20px",
-        marginRight: "20px",
-      }}
-    >
+    <div style={{ textAlign: "center" }}>
       <h1>Chris Little</h1>
-      <p>Welcome to my blog</p>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          maxWidth: "30%",
+          margin: "0 auto",
+        }}
+      >
+        <img src="images/me.jpg" style={{ width: "30%", borderRadius: "5%" }} />
+        <div style={{ marginLeft: "1rem" }}>
+          <p style={{ lineHeight: "1.75" }}>
+            Hi I'm Chris, here is where you can listen to my rants about the
+            corporate world, my thoughts on technology, some light YouTuberesque
+            philosophy and a bunch of other random stuff.
+          </p>
+        </div>
+      </div>
+      <h2 style={{ marginTop: "2rem", textAlign: "center" }}>Posts</h2>
       {blogs.map((blog) => (
-        <p key={blog}>
-          <Link to={`/blog-post/${blog}`}>BlogPost{blog}</Link>
+        <p key={blog.id}>
+          {blog.date}: <Link to={`/blog-post/${blog.id}`}>{blog.heading}</Link>
         </p>
       ))}
     </div>

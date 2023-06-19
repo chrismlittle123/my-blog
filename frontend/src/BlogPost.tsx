@@ -18,13 +18,16 @@ const BlogPost: React.FC = () => {
         return response.text();
       })
       .then((text) => {
-        setPostContent(text);
+        const absoluteText = text.replace(/\]\((.*?)\)/g, `](/posts/$1)`); // Replace relative paths in markdown
+        setPostContent(absoluteText);
       })
       .catch(console.error);
   }, [id]);
 
   return (
-    <div style={{ backgroundColor: "white", color: "black" }}>
+    <div
+      style={{ marginLeft: "600px", marginRight: "600px", lineHeight: "1.75" }}
+    >
       <ReactMarkdown rehypePlugins={[rehypeRaw]} children={postContent} />
     </div>
   );
