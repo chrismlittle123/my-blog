@@ -7,7 +7,14 @@ const Home: React.FC = () => {
     .map((_, i) => i + 1); // Create an array
 
   return (
-    <div style={{ backgroundColor: "white", color: "black" }}>
+    <div
+      style={{
+        backgroundColor: "white",
+        color: "black",
+        marginLeft: "20px",
+        marginRight: "20px",
+      }}
+    >
       <h1>Chris Little</h1>
       <p>Welcome to my blog</p>
       {blogs.map((blog) => (
