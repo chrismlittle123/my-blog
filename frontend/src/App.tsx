@@ -1,23 +1,15 @@
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./HomePage";
-import PostPage from "./PostPage";
-import posts from "./posts";
+import Home from "./Home";
+import BlogPost from "./BlogPost";
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        {posts.map((post) => (
-          <Route
-            path={`/post/${post.id}`}
-            key={post.id}
-            element={<PostPage id={post.id} />}
-          />
-        ))}
-      </Routes>
-    </Router>
-  );
-}
+const App: React.FC = () => (
+  <Router>
+    <Routes>
+      <Route path="/blog-post/*" element={<BlogPost />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
