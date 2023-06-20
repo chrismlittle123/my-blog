@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import rehypeRaw from "rehype-raw";
 
 const BlogPost: React.FC = () => {
@@ -25,10 +25,28 @@ const BlogPost: React.FC = () => {
   }, [id]);
 
   return (
-    <div
-      style={{ marginLeft: "600px", marginRight: "600px", lineHeight: "1.75" }}
-    >
-      <ReactMarkdown rehypePlugins={[rehypeRaw]} children={postContent} />
+    <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "50px",
+        }}
+      >
+        <Link to="/" style={{ fontSize: "20px" }}>
+          Home
+        </Link>
+      </div>
+      <div
+        style={{
+          marginLeft: "600px",
+          marginRight: "600px",
+          lineHeight: "1.75",
+        }}
+      >
+        <ReactMarkdown rehypePlugins={[rehypeRaw]} children={postContent} />
+      </div>
     </div>
   );
 };
