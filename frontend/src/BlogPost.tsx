@@ -40,8 +40,8 @@ const BlogPost: React.FC = () => {
       </div>
       <div
         style={{
-          marginLeft: "600px",
-          marginRight: "600px",
+          marginLeft: "30%",
+          marginRight: "30%",
           lineHeight: "1.75",
         }}
       >
