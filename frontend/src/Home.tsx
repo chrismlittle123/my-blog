@@ -6,7 +6,12 @@ const Home: React.FC = () => {
     {
       id: 1,
       heading: "What do I need to do to get fired around here?",
-      date: "June 19, 2023",
+      date: "19 June 2023",
+    },
+    {
+      id: 2,
+      heading: "Penis with Ears",
+      date: "8 July 2023",
     },
   ];
 

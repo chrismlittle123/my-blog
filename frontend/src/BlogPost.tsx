@@ -34,7 +34,7 @@ const BlogPost: React.FC = () => {
           height: "50px",
         }}
       >
-        <Link to="/" style={{ fontSize: "20px" }}>
+        <Link to="/" >
           Home
         </Link>
       </div>
