@@ -13,6 +13,11 @@ const Home: React.FC = () => {
       heading: "Penis with Ears",
       date: "8 July 2023",
     },
+    {
+      id: 3,
+      heading: "Granbuelo",
+      date: "20 August 2023",
+    },
   ];
 
   return (
