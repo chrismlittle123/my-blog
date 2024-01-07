@@ -23,6 +23,16 @@ const Home: React.FC = () => {
       heading: "How to be a disappointment",
       date: "17 September 2023",
     },
+    {
+      id: 5,
+      heading: "Water and Diamonds",
+      date: "30 October 2023",
+    },
+    {
+      id: 6,
+      heading: "Corporate CULTure",
+      date: "10 December 2023",
+    },
   ];
 
   return (
