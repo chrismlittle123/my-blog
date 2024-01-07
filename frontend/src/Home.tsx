@@ -33,6 +33,11 @@ const Home: React.FC = () => {
       heading: "Corporate CULTure",
       date: "10 December 2023",
     },
+    {
+      id: 7,
+      heading: "The Wheel and the Flock",
+      date: "8 January 2024",
+    },
   ];
 
   return (
