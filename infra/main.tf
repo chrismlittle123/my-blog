@@ -70,6 +70,9 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
   is_ipv6_enabled     = true
   default_root_object = "index.html"
 
+  # Add this line to include your custom domain name
+  aliases = ["chris-little.com", "www.chris-little.com"]
+
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD"]
     cached_methods   = ["GET", "HEAD"]
